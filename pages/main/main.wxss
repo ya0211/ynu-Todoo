@@ -1,0 +1,74 @@
+/* pages/main/main.wxss */
+
+/* 滑动组件 */
+.swiper-view {
+  margin-top: 10px;
+}
+.swiper-item {
+  position: relative;
+  width: 96vw;
+  left: 2vw;
+  height: 16vh;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 5vw;
+  color: #fff;
+}
+.swiper-item text.text {
+  position: absolute; 
+  left: 4vw;
+  right: 4vw;
+  top: 3vh;
+}
+
+/* 菜单组件 */
+.menu-list-view {
+  position: absolute;
+  width: 96%;
+  left: 2%;
+  top: 18vh;
+  background-color: var(--weui-BG-1);
+}
+.menu-item {
+  margin-top: 10px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.menu-item:last-child {
+  margin-bottom: 10px;
+}
+.menu-item-title {
+  padding: 10px 20px 10px;
+  font-size: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--weui-BG-0);
+  color: #727375;
+}
+.menu-item-icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+.menu-item-text {
+  font-size: 16px;
+  color: #1B1C1F;
+}
+
+/* 菜单组件布局 */
+.weui-grid {
+  position: relative;
+  text-align: center;
+  border-radius: 6px;
+}
+.weui-grids::after {
+  border-left: 0;
+}
+.weui-grids::before {
+  border-top: 0;
+}
+.weui-grid::after {
+  border-bottom: 0;
+}
+.weui-grid::before {
+  border-right: 0;
+}

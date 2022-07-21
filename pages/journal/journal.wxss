@@ -1,0 +1,76 @@
+/* pages/journal/journal.wxss */
+
+/* 滑动组件 */
+.swiper-view {
+  margin-top: 10px;
+}
+.swiper-item {
+  position: relative;
+  width: 94vw;
+  left: 3vw;
+  height: 10vh;
+  border-radius: 2px;
+  font-size: 5vw;
+}
+.swiper-item image.image {
+  width: 94vw;
+  height: 10vh;
+  border-radius: 2px;
+}
+
+/* 页面布局 */
+.folder-view {
+  position: absolute;
+  width: 92%;
+  left: 4%;
+  top: 10vh;
+}
+.folder-view view.title {
+  padding: 0px 2px 10px;
+  text-align: left;
+}
+
+/* Folder */
+.title view.text {
+  margin-top: 30px;
+  color: var(--weui-FG-1);
+  font-weight: bold;
+  font-size: 6vw;
+}
+
+/* 文件夹组件 */
+.folder-list-item {
+  margin: 10px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.folder-list-item:first-child {
+  margin-top: 0;
+}
+.folder-list-item view.item {
+  position: relative;
+  background-color: var(--weui-BG-2);
+  border-radius: 8px;
+  padding: 20px;
+  line-height: 1.4;
+  font-size: 17px;
+}
+.item image.icon {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+.item view.text {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  color: #000;
+}
+.item view.count {
+  position: absolute;
+  top: 35%;
+  right: 35px;
+  font-weight: bold;
+  color: #656A72;
+}

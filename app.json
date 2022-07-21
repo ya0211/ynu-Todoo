@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/schedule/schedule",
+    "pages/journal/journal",
+    "pages/mood/mood",
+    "pages/goal/goal"
+  ],
+  "subpackages": [
+    {
+      "root": "packageJournal",
+      "pages": [
+        "pages/edit/edit"
+      ]
+    },
+    {
+      "root": "packageAbout",
+      "pages": [
+        "pages/about/about"
+      ]
+    },
+    {
+      "root": "packageMain",
+      "pages": [
+        "pages/id/id",
+        "pages/profile/profile"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "iconPath": "image/navbar/light/user-profile.png",
+        "selectedIconPath": "image/navbar/dark/user-profile.png"
+      },
+      {
+        "pagePath": "pages/schedule/schedule",
+        "iconPath": "image/navbar/light/calendar-schedule-31.png",
+        "selectedIconPath": "image/navbar/dark/calendar-schedule-31.png"
+      },
+      {
+        "pagePath": "pages/journal/journal",
+        "iconPath": "image/navbar/light/letter-spacing-1.png",
+        "selectedIconPath": "image/navbar/dark/letter-spacing-1.png"
+      },
+      {
+        "pagePath": "pages/mood/mood",
+        "iconPath": "image/navbar/light/smileys.png",
+        "selectedIconPath": "image/navbar/dark/smileys.png"
+      },
+      {
+        "pagePath": "pages/goal/goal",
+        "iconPath": "image/navbar/light/target-goal.png",
+        "selectedIconPath": "image/navbar/dark/target-goal.png"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "usingComponents": {
+    "mp-icon": "/components/icon/icon"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

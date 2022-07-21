@@ -1,0 +1,16 @@
+<!--packageJournal/pages/check/check.wxml-->
+<!--list-->
+<view class="page">
+  <view class="folder">
+    <image class="icon" src="/pages/journal/resources/folder/{{folder.icon}}.svg"></image>
+    <view class="text">{{folder.name}}</view>
+    <view class="count">{{folder.list.length}}</view>
+  </view>
+  <view class="weui-cells">
+    <block wx:for="{{folder.list}}" wx:key="index">
+      <view class="weui-cell">
+        <view class="item">{{item}}</view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/main/main.js-->
+
+<!--滑动组件-->
+<view class="swiper-view">
+  <swiper indicator-dots="{{false}}" autoplay="{{true}}" circular="{{true}}" interval="{{5000}}" duration="{{600}}">
+    <block wx:for="{{background}}" wx:key="index">
+      <swiper-item>
+        <view class="swiper-item" style="background-color: {{background[index]}};">
+          <text class="text">{{swiperText[index]}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!--菜单组件-->
+<view class="menu-list-view">
+  <block wx:for="{{menuList}}" wx:key="index">
+    <view class="menu-item">
+      <view class="menu-item-title">{{item.title}}</view>
+      <view class="weui-grids">
+        <block wx:for="{{item.options}}" wx:key="index">
+          <view class="weui-grid" data-index="{{item.index}}" bindtap="menuTap">
+            <image class="menu-item-icon" src="resources/menu/{{item.icon}}"></image>
+            <view class="menu-item-text">{{item.text}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

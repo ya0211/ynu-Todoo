@@ -1,0 +1,6 @@
+/* app.wxss */
+@import 'weui.wxss';
+page {
+  background-color: var(--weui-BG-1);
+  color: var(--weui-FG-0);
+}

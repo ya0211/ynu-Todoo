@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Journal",
+  "usingComponents": {
+    "mp-slideview": "../../components/slideview/slideview"
+  }
+}

@@ -1,0 +1,105 @@
+/* pages/goal/goal.wxss */
+
+/* 滑动组件 */
+.swiper-view {
+  margin-top: 10px;
+}
+.swiper-item {
+  position: relative;
+  width: 94vw;
+  left: 3vw;
+  height: 10vh;
+  border-radius: 2px;
+  font-size: 5vw;
+}
+.swiper-item image.image {
+  width: 94vw;
+  height: 10vh;
+  border-radius: 2px;
+}
+
+/* 页面布局 */
+.page-view {
+  position: absolute;
+  width: 92%;
+  left: 4%;
+  top: 10vh;
+}
+.page-view view.tabs {
+  padding: 10px 0 10px;
+  display: flex;
+}
+
+/* Tabs */
+.tabs view.title {
+  width: 30%;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 5%;
+  color: var(--weui-FG-1);
+  font-weight: normal;
+  font-size: 4vw;
+}
+.tabs view.selected {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}
+.tabs view.title:first-child {
+  margin-left: 0;
+}
+
+/* Goals组件 */
+.goals-list {
+  background-color: var(--weui-BG-1);
+}
+.goals-list-item {
+  position: relative;
+  margin-top: 20px;
+}
+.goals-list-item:last-child {
+  margin-bottom: 20px;
+}
+.movable-view {
+  height: 100%;
+  width: 0%;
+  background: #44E9FF;
+}
+.movable-area {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(201, 249, 255);
+  overflow: hidden;
+  border-radius: 6px;
+}
+.item-title {
+  position: relative;
+  width: 100%;
+  margin-top: -5px;
+  color: #000;
+  font-weight: bolder;
+}
+.item-text {
+  position: relative;
+  width: 100%;
+  margin-bottom: -5px;
+  color: rgb(32, 32, 32);
+  font-size: 15px;
+  font-weight: normal;
+}
+.item-count {
+  font-weight: bolder;
+}
+
+/* Goals组件布局 */
+.weui-cell {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color:transparent;
+}
+.weui-cell::before {
+  border-top: 0px;
+}

@@ -1,0 +1,43 @@
+/* packageMain/pages/profile/profile.wxss */
+
+.weui-cells {
+  margin-top: 10px;
+  background-color: transparent;
+}
+.weui-cell {
+  margin-top: 0px;
+  background-color: #fff;
+}
+.avatar-text {
+  font-weight: normal;
+}
+.weui-cell button.button {
+  margin-left: 70%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.weui-cell image.image {
+  position: absolute;
+  left: 0; 
+  top: 0;
+  width: 50px;
+  height: 50px;
+}
+.username-text {
+  font-weight: normal;
+}
+.nickname-text {
+  position: absolute;
+  right: 5%;
+  color: var(--weui-FG-1);
+}
+.input-view {
+  height: 35px;
+  color: var(--weui-FG-1);
+  border: 1px solid var(--weui-FG-3);
+  border-radius: 4px;
+}
+.placeholder-class {
+  margin-left: 10px;
+}

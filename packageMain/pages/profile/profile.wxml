@@ -1,0 +1,13 @@
+<!--packageMain/pages/profile/profile.wxml-->
+<view class="weui-cells">
+  <view class="weui-cell">
+    <view class="avatar-text">avatar</view>
+    <button class="button" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+      <image class="image" src="{{avatarUrl}}"></image>
+    </button>
+  </view>
+  <view class="weui-cell">
+    <view class="username-text">username</view>
+    <view class="nickname-text">developer</view>
+  </view>
+</view>
