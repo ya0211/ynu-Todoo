@@ -1,39 +1,38 @@
 <!--pages/journal/journal.wxml-->
-
 <!--滑动组件-->
 <view class="swiper-view">
-  <swiper indicator-dots="{{false}}" autoplay="{{true}}" circular="{{true}}" interval="{{5000}}" duration="{{600}}">
-    <block wx:for="{{background}}" wx:key="index">
-      <swiper-item>
-        <view class="swiper-item">
-          <image class="image" mode="aspectFill" src="{{item}}"></image>
-        </view>
-      </swiper-item>
-    </block>
-  </swiper>
+	<swiper indicator-dots="{{false}}" autoplay="{{true}}" circular="{{true}}" interval="{{5000}}" duration="{{600}}">
+		<block wx:for="{{background}}" wx:key="index">
+			<swiper-item>
+				<view class="swiper-item">
+					<image class="image" mode="aspectFill" src="cloud://ya0211-1gcmrx9005ca7006.7961-ya0211-1gcmrx9005ca7006-1311810777/example/{{item}}"></image>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
 </view>
 
 <view class="folder-view">
-  <!--Folder-->
-  <view class="title">
-    <view class="text">Folder</view>
-  </view>
-  <!--文件夹组件-->
-  <block wx:for-items="{{folder}}" wx:key="index">
-    <view class="folder-list-item">
-      <!--侧滑操作组件-->
-      <block wx:if="{{item.name != ''}}">
-        <mp-slideview buttons="{{slideButtons}}" icon="{{true}}" data-index="{{index}}" bindbuttontap="slideButton">
-          <view class="item">
-            <image wx:if="{{item.icon != ''}}" class="icon" src="resources/folder/{{item.icon}}.svg"></image>
-            <view class="text">{{item.name}}</view>
-            <view class="count">{{item.list.length}}</view>
-          </view>
-        </mp-slideview>
-      </block>
-      <block wx:else="{{item.name != ''}}">
-        <view class="item"></view>
-      </block>
-    </view>
-  </block>
+	<!--Folder-->
+	<view class="title">
+		<view class="text">Folder</view>
+	</view>
+	<!--文件夹组件-->
+	<block wx:for-items="{{folderList}}" wx:key="index">
+		<view class="folder-list-item">
+			<!--侧滑操作组件-->
+			<block wx:if="{{item.name != ''}}">
+				<mp-slideview buttons="{{slideButtons}}" icon="{{true}}" data-index="{{index}}" bindbuttontap="bindButtonTap">
+					<view class="item">
+						<image wx:if="{{item.icon != ''}}" class="icon" src="resources/folder/{{item.icon}}.svg"></image>
+						<view class="text">{{item.name}}</view>
+						<view class="count">{{item.list.length}}</view>
+					</view>
+				</mp-slideview>
+			</block>
+			<block wx:else="{{item.name != ''}}">
+				<view class="item"></view>
+			</block>
+		</view>
+	</block>
 </view>

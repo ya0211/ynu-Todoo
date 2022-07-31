@@ -1,13 +1,34 @@
 <!--packageMain/pages/profile/profile.wxml-->
-<view class="weui-cells">
-  <view class="weui-cell">
-    <view class="avatar-text">avatar</view>
-    <button class="button" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
-      <image class="image" src="{{avatarUrl}}"></image>
-    </button>
-  </view>
-  <view class="weui-cell">
-    <view class="username-text">username</view>
-    <view class="nickname-text">developer</view>
-  </view>
+<!--Profile组件-->
+<view class="profile-card">
+	<view class="weui-cells ">
+		<view class="weui-cell">
+			<view class="avatar-text">avatar</view>
+			<button class="button" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+				<image class="image" src="{{avatarUrl}}"></image>
+			</button>
+		</view>
+		<view class="weui-cell">
+			<view class="username-text">username</view>
+			<view class="nickname-text">developer</view>
+		</view>
+	</view>
+</view>
+
+<!--ID组件-->
+<view class="id-card">
+	<view class="weui-cells">
+		<block wx:if="{{infoList.openid != null}}">
+			<view class="id-text">OpenID</view>
+			<view class="id-value">{{infoList.openid}}</view>
+		</block>
+		<block wx:if="{{infoList.appid != null}}">
+			<view class="id-text">AppID</view>
+			<view class="id-value">{{infoList.appid}}</view>
+		</block>
+		<block wx:if="{{infoList.unionid != null && infoList.unionid != ''}}">
+			<view class="id-text">UnionID</view>
+			<view class="id-value">{{infoList.unionid}}</view>
+		</block>
+	</view>
 </view>

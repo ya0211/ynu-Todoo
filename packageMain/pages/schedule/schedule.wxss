@@ -1,0 +1,87 @@
+/* packageMain/pages/schedule/schedule.wxss */
+
+/* 页面布局 */
+.page-view {
+	padding: 6px 10px 6px;
+	background-color: transparent;
+}
+
+/* 组件 */
+.weui-cell view.text {
+	margin-right: 20px;
+}
+.weui-cell image.image {
+	width: 25px;
+	height: 25px;
+	margin-right: 15px;
+}
+
+/* Operate组件 */
+.weui-grid image.item-icon {
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	width: 40%;
+	height: 40%;
+}
+
+/* Task组件布局 */
+.weui-cells {
+	border: 1px solid var(--weui-BG-0);
+	border-radius: 8px;
+}
+.weui-cells:last-child {
+	margin-bottom: 10px;
+}
+.weui-cells::before {
+	border: 0px;
+}
+
+.weui-cells::after {
+	border: 0px;
+}
+.weui-cell {
+	margin-top: 0px;
+	background-color: #fff;
+}
+.weui-cell::before {
+	left: 0px;
+}
+.weui-cell__hb {
+	display: flex;
+}
+.weui-cell__hd {
+	display: flex;
+}
+
+/* Operate组件布局 */
+.weui-grids {
+	border-radius: 8px;
+	background-color: #fff;
+}
+.weui-grid {
+	width: 40px;
+	height: 40px;
+	margin: 6px 6px 6px 0px;
+	text-align: center;
+	border: 1px solid var(--weui-BG-0);
+	border-radius: 8px;
+}
+.weui-grid:first-child {
+	margin-left: 6px;
+}
+.weui-grid:last-child {
+	margin-right: 6px;
+}
+.weui-grids::after {
+	border-left: 0;
+}
+.weui-grids::before {
+	border-top: 0;
+}
+.weui-grid::after {
+	border-bottom: 0;
+}
+.weui-grid::before {
+	border-right: 0;
+}

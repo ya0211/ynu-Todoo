@@ -1,6 +1,6 @@
 {
-  "navigationBarTitleText": "Journal",
-  "usingComponents": {
-    "mp-slideview": "../../components/slideview/slideview"
-  }
+	"navigationBarTitleText": "Journal",
+	"usingComponents": {
+		"mp-slideview": "../../components/slideview/slideview"
+	}
 }

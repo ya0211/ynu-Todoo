@@ -1,34 +1,33 @@
 <!--pages/schedule/schedule.wxml-->
-
 <!--日历组件-->
 <view class="calendar-view">
-  <view class="date-item">
-    <block wx:for="{{dateArray}}" wx:key="index">
-        <view class="normal {{item.day == thisDate ? 'active' : ''}}" data-id="{{item.day}}" data-time="{{item.date}}" bindtap="changeDate">
-          <view class="day">{{item.day}}</view>
-          <view class="week">{{item.week}}</view>
-          <view wx:if="{{item.day == thisDate}}" class="point"></view>
-        </view>
-    </block>
-  </view>
+	<view class="date-item">
+		<block wx:for="{{dateArray}}" wx:key="index">
+			<view class="normal {{item.day == day ? 'active' : ''}}" data-day="{{item.day}}" data-date="{{item.date}}" bindtap="bindDateChange">
+				<view class="day">{{item.day}}</view>
+				<view class="week">{{item.week}}</view>
+				<view wx:if="{{item.day == day}}" class="point"></view>
+			</view>
+		</block>
+	</view>
 </view>
 
 <!--Daily-->
 <view class="page-view">
-  <view class="text">Daily Tasks</view>
+	<view class="text">Daily Tasks</view>
 </view>
 
 <!--任务清单组件-->
 <view class="page-view">
-  <checkbox-group bindchange="checkboxChange">
-    <label class="weui-cell item" wx:for="{{todoList}}" wx:key="index">
-      <view class="weui-cell__hd">
-        <checkbox value="{{item.time}}" checked="{{item.checked}}" />
-      </view>
-      <view class="weui-cell__bd">
-        <view class="item-name ">{{item.name}}</view>
-        <view class="item-time ">{{item.time}}</view>
-      </view>
-    </label>
-  </checkbox-group>
+	<checkbox-group bindchange="bindCheckboxChange">
+		<label class="weui-cell item" wx:for="{{todoList}}" wx:key="index">
+			<view class="weui-cell__hd">
+				<checkbox value="{{item.time}}" checked="{{item.checked}}" />
+			</view>
+			<view class="weui-cell__bd">
+				<view class="item-name ">{{item.name}}</view>
+				<view class="item-time ">{{item.time}}</view>
+			</view>
+		</label>
+	</checkbox-group>
 </view>

@@ -1,0 +1,115 @@
+/* packageMain/pages/mood/mood.wxss */
+
+/* 页面布局 */
+.page-view {
+	padding: 6px 10px 6px;
+	background-color: transparent;
+}
+
+/* 组件 */
+.weui-cell view.text {
+	margin-right: 20px;
+}
+.weui-cell image.image {
+	width: 25px;
+	height: 25px;
+	margin-right: 15px;
+}
+
+/* Operate组件 */
+.operate {
+	border-top: 1px solid var(--weui-FG-3);
+}
+.operate-item-icon {
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	width: 40%;
+	height: 40%;
+}
+
+/* Recent组件 */
+.recent-list {
+	position: relative;
+	margin-top: 10px;
+	background-color: var(--weui-BG-1);
+}
+.recent-list view.item {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.recent-list view.item__hb {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.weui-cells view.item-text {
+	color: #000;
+}
+.weui-cells view.item-time {
+	color: #656A72;
+}
+.weui-cells image.item-icon {
+	position: relative;
+	width: 36px;
+	height: 36px;
+	margin: 12px;
+}
+
+/* Operate组件布局 */
+.weui-grids {
+	border-radius: 8px;
+	background-color: #fff;
+}
+.weui-grid {
+	width: 40px;
+	height: 40px;
+	margin: 6px 6px 6px 0px;
+	text-align: center;
+	border: 1px solid var(--weui-BG-0);
+	border-radius: 8px;
+}
+.weui-grid:first-child {
+	margin-left: 6px;
+}
+.weui-grid:last-child {
+	margin-right: 6px;
+}
+.weui-grids::after {
+	border-left: 0;
+}
+.weui-grids::before {
+	border-top: 0;
+}
+.weui-grid::after {
+	border-bottom: 0;
+}
+.weui-grid::before {
+	border-right: 0;
+}
+
+/* 组件布局 */
+.weui-cells {
+	border: 1px solid var(--weui-BG-0);
+	border-radius: 8px;
+}
+.weui-cells::before {
+	border: 0px;
+}
+.weui-cells::after {
+	border: 0px;
+}
+.weui-cell {
+	padding: 16px; 
+	background-color: #fff;
+}
+.weui-cell::before {
+	border: 0px;
+}
+.weui-cell__hb {
+	display: flex;
+}
+.weui-cell__bd {
+	height: max-content;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}

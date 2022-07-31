@@ -1,39 +1,39 @@
 <!--pages/goal/goal.wxml-->
 <!--滑动组件-->
 <view class="swiper-view">
-  <swiper indicator-dots="{{false}}" autoplay="{{true}}" circular="{{true}}" interval="{{5000}}" duration="{{600}}">
-    <block wx:for="{{background}}" wx:key="index">
-      <swiper-item>
-        <view class="swiper-item">
-          <image class="image" mode="aspectFill" src="{{item}}"></image>
-        </view>
-      </swiper-item>
-    </block>
-  </swiper>
+	<swiper indicator-dots="{{false}}" autoplay="{{true}}" circular="{{true}}" interval="{{5000}}" duration="{{600}}">
+		<block wx:for="{{background}}" wx:key="index">
+			<swiper-item>
+				<view class="swiper-item">
+					<image class="image" mode="aspectFill" src="cloud://ya0211-1gcmrx9005ca7006.7961-ya0211-1gcmrx9005ca7006-1311810777/example/{{item}}"></image>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
 </view>
 <view class="page-view">
-  <!--Tabs-->
-  <view class="tabs">
-    <block wx:for="{{tabs.list}}" wx:key="index">
-      <view class="title {{item.selected ? 'selected':''}}" data-index="{{index}}" bindtap="changeTab">{{item.title}}</view>
-    </block>
-  </view>
-  <!--Recent组件-->
-  <view class="goals-list">
-    <block wx:for="{{goalsList[tabs.index]}}" wx:key="index">
-      <view class="goals-list-item">
-        <movable-area class="movable-area">
-          <movable-view class="movable-view" style="width: {{item.count}}" direction="horizontal" disabled="{{true}}">
-          </movable-view>
-        </movable-area>
-        <view class="weui-cell">
-          <view class="weui-cell__bd">
-            <view class="item-title">{{item.title}}</view>
-            <view class="item-text">{{item.text}}</view>
-          </view>
-          <view wx:if="{{item.title != ''}}" class="item-count">{{item.count}}</view>
-        </view>
-      </view>
-    </block>
-  </view>
+	<!--Tabs-->
+	<view class="tabs">
+		<block wx:for="{{tabsList.list}}" wx:key="index">
+			<view class="title {{item.selected ? 'selected':''}}" data-index="{{index}}" bindtap="bindChangeTab">{{item.title}}</view>
+		</block>
+	</view>
+	<!--Goals组件-->
+	<view class="goals-list">
+		<block wx:for="{{goalsList[tabsList.index]}}" wx:key="index">
+			<view class="goals-list-item">
+				<movable-area class="movable-area {{item.title == '' ? 'empty':''}}">
+					<movable-view class="movable-view" style="width: {{item.count}}" direction="horizontal" disabled="{{true}}">
+					</movable-view>
+				</movable-area>
+				<view class="weui-cell">
+					<view class="weui-cell__bd">
+						<view class="item-title">{{item.title}}</view>
+						<view class="item-text">{{item.text}}</view>
+					</view>
+					<view wx:if="{{item.title != ''}}" class="item-count">{{item.count}}</view>
+				</view>
+			</view>
+		</block>
+	</view>
 </view>

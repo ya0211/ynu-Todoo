@@ -4,16 +4,31 @@ function getDateArray() {
   let year = date.getFullYear();
   let month;
   let day;
-  let fullDate;
+  let _date;
   let dateArray = [];
   for (let i = 0; i < 7; i++) {
     month = formatLeadingZeroNumber(date.getMonth()+1, 2)
     day = formatLeadingZeroNumber(date.getDate(), 2)
-    fullDate = year + '-' + month + "-" + day;
-    dateArray.push({ 'week': week[date.getDay()], 'day': date.getDate(), 'date': fullDate });
+    _date = year + '-' + month + "-" + day;
+    dateArray.push({ 'week': week[date.getDay()], 'day': date.getDate(), 'date': _date });
     date.setDate(date.getDate()+1);
   }
   return dateArray
+}
+
+function getDay() {
+  let date = new Date();
+  let year = date.getFullYear();
+  let month = formatLeadingZeroNumber(date.getMonth()+1, 2)
+  let day = formatLeadingZeroNumber(date.getDate(), 2)
+  return year + '-' + month + "-" + day
+}
+
+function getMonth() {
+  let date = new Date();
+  let year = date.getFullYear();
+  let month = formatLeadingZeroNumber(date.getMonth()+1, 2)
+  return year + '-' + month
 }
 
 function formatLeadingZeroNumber(n, digitNum = 2) {
@@ -24,5 +39,6 @@ function formatLeadingZeroNumber(n, digitNum = 2) {
 
 module.exports = {
   getDateArray,
-  formatLeadingZeroNumber
+  getDay,
+  getMonth,
 }

@@ -2,141 +2,148 @@
 
 /* 滑动组件 */
 .swiper-view {
-  margin-top: 10px;
+	margin-top: 10px;
 }
+
 .swiper-item {
-  position: relative;
-  width: 94vw;
-  left: 3vw;
-  height: 10vh;
-  border-radius: 2px;
-  font-size: 5vw;
+	position: relative;
+	width: 94vw;
+	left: 3vw;
+	height: 10vh;
+	border-radius: 2px;
+	font-size: 5vw;
 }
+
 .swiper-item image.image {
-  width: 94vw;
-  height: 10vh;
-  border-radius: 2px;
+	width: 94vw;
+	height: 10vh;
+	border-radius: 2px;
 }
 
 /* 页面布局 */
 .page-view {
-  position: absolute;
-  width: 92%;
-  left: 4%;
-  top: 8vh;
+	position: absolute;
+	width: 94%;
+	left: 3%;
+	top: 8vh;
 }
+
 .page-view view.title {
-  padding: 0px 2px 10px;
-  text-align: left;
+	padding: 0px 2px 10px;
+	text-align: left;
 }
 
 /* Hi */
 .title view.text-hi {
-  margin-top: 45px;
-  color: #000;
-  font-weight: bold;
-  font-size: 5vw;
+	margin-top: 45px;
+	color: #000;
+	font-weight: bold;
+	font-size: 5vw;
 }
 
 /* Feeling组件 */
 .feelig-icon {
-  width: 32px;
-  height: 32px;
+	width: 32px;
+	height: 32px;
 }
+
 .feeling-text {
-  font-weight: bold;
-  color: #1B1C1F;
+	font-weight: bold;
+	color: #1B1C1F;
 }
 
 /* Feeling组件布局 */
 .weui-grid {
-  position: relative;
-  text-align: center;
-  width: 32%;
-  border-radius: 6px;
-  margin-right: 2%;
-  margin-bottom: 2%;
-  border: 2rpx solid var(--weui-FG-3);
+	position: relative;
+	text-align: center;
+	width: 32%;
+	border-radius: 6px;
+	margin-right: 2%;
+	margin-bottom: 2%;
+	border: 2rpx solid var(--weui-FG-3);
 }
+
 .weui-grid:nth-of-type(3n) {
-  margin-right: 0px;
-  margin-bottom: 0;
+	margin-right: 0px;
+	margin-bottom: 0;
 }
+
 .weui-grids::after {
-  border-left: 0;
+	border-left: 0;
 }
+
 .weui-grids::before {
-  border-top: 0;
+	border-top: 0;
 }
+
 .weui-grid::after {
-  border-bottom: 0;
+	border-bottom: 0;
 }
+
 .weui-grid::before {
-  border-right: 0;
+	border-right: 0;
 }
 
 /* Recent */
 .title view.text-recent {
-  margin-top: 10px;
-  color: #000;
-  font-weight: bold;
-  font-size: 6vw;
+	margin-top: 10px;
+	color: #000;
+	font-weight: bold;
+	font-size: 6vw;
 }
 
 /* Recent组件 */
 .recent-list {
-  position: relative;
-  margin-top: 0;
-  background-color: var(--weui-BG-1);
+	position: relative;
+	margin-top: 0;
+	background-color: var(--weui-BG-1);
 }
-.recent-list-item-text {
-  position: relative;
-  width: 100%;
-  margin-top: -5px;
-  left: 5px;
-  color: #000;
+
+.recent-list view.item {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
-.recent-list-item-time {
-  position: relative;
-  width: 100%;
-  left: 5px;
-  margin-bottom: -5px;
-  color: #656A72;
+
+.weui-cells view.item-text {
+	width: 100%;
+	color: #000;
 }
-.recent-list-item-icon {
-  width: 30px;
-  height: 30px;
+
+.weui-cells view.item-time {
+	width: 100%;
+	color: #656A72;
+}
+
+.weui-cells image.item-icon {
+	width: 30px;
+	height: 30px;
+	margin: 10px;
 }
 
 /* Recent组件布局 */
-.weui-cell {
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  background-color:#fff;
-}
-.weui-cell::before {
-  border-top: 0px;
+.weui-cells {
+	border-radius: 8px;
 }
 
-/* 小箭头组件 */
-.navigator-arrow {
-  padding-right: 10px;
-  position: relative;
-  right: -10px;
+.weui-cells::before {
+	border: 0px;
 }
-.navigator-arrow::after {
-  content: " ";
-  display: inline-block;
-  height: 9px;
-  width: 9px;
-  border-width: 1.5px 1.5px 0 0;
-  border-color: var(--weui-FG-2);
-  border-style: solid;
-  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-  position: absolute;
-  top: 50%;
-  margin-top: -4px;
-  right: 14px;
+
+.weui-cells::after {
+	border: 0px;
+}
+
+.weui-cell {
+	border-radius: 8px;
+	background-color: #fff;
+}
+
+.weui-cell::before {
+	border-top: 0px;
+}
+
+.weui-cell__hb {
+	display: flex;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }

@@ -1,43 +1,85 @@
 /* packageMain/pages/profile/profile.wxss */
 
-.weui-cells {
-  margin-top: 10px;
-  background-color: transparent;
+/* Profile组件 */
+.profile-card {
+	padding: 6px 10px 6px;
+	background-color: transparent;
 }
-.weui-cell {
-  margin-top: 0px;
-  background-color: #fff;
-}
+
 .avatar-text {
-  font-weight: normal;
+	font-weight: normal;
 }
+
 .weui-cell button.button {
-  margin-left: 70%;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+	margin-left: 70%;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
 }
+
 .weui-cell image.image {
-  position: absolute;
-  left: 0; 
-  top: 0;
-  width: 50px;
-  height: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50px;
+	height: 50px;
 }
+
 .username-text {
-  font-weight: normal;
+	font-weight: normal;
 }
+
 .nickname-text {
-  position: absolute;
-  right: 5%;
-  color: var(--weui-FG-1);
+	position: absolute;
+	right: 5%;
+	color: var(--weui-FG-1);
 }
-.input-view {
-  height: 35px;
-  color: var(--weui-FG-1);
-  border: 1px solid var(--weui-FG-3);
-  border-radius: 4px;
+
+/* ID组件 */
+.id-card {
+	padding: 0px 10px 6px;
+	background-color: transparent;
 }
-.placeholder-class {
-  margin-left: 10px;
+
+.id-text {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 15px;
+	color: #c9cacc;
+}
+
+.id-text:first-child {
+	margin-top: 5px;
+}
+
+.id-value {
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.id-value:last-child {
+	margin-bottom: 5px;
+}
+
+/* 组件布局 */
+.weui-cells {
+	border: 1px solid var(--weui-BG-0);
+	border-radius: 8px;
+}
+
+.weui-cells::before {
+	border: 0px;
+}
+
+.weui-cells::after {
+	border: 0px;
+}
+
+.weui-cell {
+	background-color: #fff;
+}
+
+.weui-cell::before {
+	left: 0px;
 }

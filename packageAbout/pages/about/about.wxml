@@ -1,36 +1,35 @@
 <!--packageAbout/pages/about/about.wxml-->
-<!---->
 <view class="page">
-  <!--项目组件-->
-  <view class="kind-list">
-    <block wx:for-items="{{list}}" wx:key="id">
-      <view class="kind-list-item">
-        <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindClick">
-          <image class="kind-list-icon" src="resources/{{item.id}}.svg"></image>
-          <view class="kind-list-text">{{item.name}}</view>
-        </view>
+	<!--项目组件-->
+	<view class="kind-list">
+		<block wx:for-items="{{list}}" wx:key="id">
+			<view class="kind-list-item">
+				<view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="bindKindClick">
+					<image class="kind-list-icon" src="/packageAbout/resources/{{item.id}}.svg"></image>
+					<view class="kind-list-text">{{item.name}}</view>
+				</view>
 
-        <!--子组件-->
-        <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
-          <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
-            <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="index">
-              <view class="weui-cell" data-zh="{{page.zh}}" data-url="{{page.url}}" bindtap="openDialog">
-                <image wx:if="{{page.icon != ''}}" class="kind-list-item-icon" src="{{page.icon}}"></image>
-                <view class="navigator-text">{{page.zh}}</view>
-              </view>
-            </block>
-          </view>
-        </view>
-      </view>
-    </block>
-  </view>
+				<!--子组件-->
+				<view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+					<view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+						<block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="index">
+							<view class="weui-cell" data-zh="{{page.zh}}" data-url="{{page.url}}" bindtap="bindOpenDialog">
+								<image wx:if="{{page.icon != ''}}" class="kind-list-item-icon" src="{{page.icon}}"></image>
+								<view class="navigator-text">{{page.zh}}</view>
+							</view>
+						</block>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
 </view>
 
 <!--复制弹窗-->
 <mp-halfScreenDialog show="{{showDialog}}" closabled="{{false}}">
-  <view slot="title">{{titleDialog}}</view>
-  <view slot="desc">{{descDialog}}</view>
-  <view slot="footer">
-    <button type="default" class="weui-btn" style="color: #B57BFF;" data-url="{{descDialog}}" bindtap="copy">Copy</button>
-  </view>
+	<view slot="title">{{titleDialog}}</view>
+	<view slot="desc">{{descDialog}}</view>
+	<view slot="footer">
+		<button type="primary" class="weui-btn" data-url="{{descDialog}}" bindtap="bindCopy">Copy</button>
+	</view>
 </mp-halfScreenDialog>

@@ -1,0 +1,50 @@
+<!--packageMain/pages/schedule/schedule.wxml-->
+<view class="page-view">
+	<!--Date组件-->
+	<view class="weui-cells">
+		<view class="weui-cell weui-cell_input">
+			<view class="weui-cell__hb">
+				<image class="image" src="/packageMain/resources/schedule/calendar.svg"></image>
+				<view class="text">DATE</view>
+			</view>
+			<view class="weui-cell__bd">
+				<picker mode="date" value="{{date}}" bindchange="bindDateChange">
+					<view class="weui-input">{{date}}</view>
+				</picker>
+			</view>
+		</view>
+		<!--Operate组件-->
+		<view class="weui-cell" style="padding: 0px;">
+			<view class="weui-grids">
+				<block wx:for="{{operateList}}" wx:key="index">
+					<view class="weui-grid" data-index="{{index}}" bindtap="bindOperateTap">
+						<image class="item-icon" src="/packageMain/resources/schedule/{{item}}.svg"></image>
+					</view>
+				</block>
+			</view>
+		</view>
+	</view>
+	<!--Task组件-->
+	<block wx:for="{{todoList}}" wx:key="index">
+		<view class="weui-cells">
+			<view class="weui-cell weui-cell_input">
+				<view class="weui-cell__hd">
+					<image class="image" src="/packageMain/resources/schedule/bookmark.svg"></image>
+					<view class="text">TASK</view>
+				</view>
+				<input class="weui-input" maxlength="20" placeholder='Todoo' value="{{item.name}}" data-index="{{index}}" bindinput="bindKeyInput" />
+			</view>
+			<view class="weui-cell weui-cell_input">
+				<view class="weui-cell__hd">
+					<image class="image" src="/packageMain/resources/schedule/clock.svg"></image>
+					<view class="text">TIME</view>
+				</view>
+				<view class="weui-cell__bd">
+					<picker mode="time" value="{{item.time}}" data-index="{{index}}" bindchange="bindTimeChange">
+						<view class="weui-input">{{item.time}}</view>
+					</picker>
+				</view>
+			</view>
+		</view>
+	</block>
+</view>

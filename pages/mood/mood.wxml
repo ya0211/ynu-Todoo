@@ -1,47 +1,47 @@
 <!--pages/mood/mood.wxml-->
-
 <!--滑动组件-->
 <view class="swiper-view">
-  <swiper indicator-dots="{{false}}" autoplay="{{true}}" circular="{{true}}" interval="{{5000}}" duration="{{600}}">
-    <block wx:for="{{background}}" wx:key="index">
-      <swiper-item>
-        <view class="swiper-item">
-          <image class="image" mode="aspectFill" src="{{item}}"></image>
-        </view>
-      </swiper-item>
-    </block>
-  </swiper>
+	<swiper indicator-dots="{{false}}" autoplay="{{true}}" circular="{{true}}" interval="{{5000}}" duration="{{600}}">
+		<block wx:for="{{background}}" wx:key="index">
+			<swiper-item>
+				<view class="swiper-item">
+					<image class="image" mode="aspectFill" src="cloud://ya0211-1gcmrx9005ca7006.7961-ya0211-1gcmrx9005ca7006-1311810777/example/{{item}}"></image>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
 </view>
 
 <view class="page-view">
-  <!--Hi-->
-  <view class="title">
-    <view class="text-hi">Hi Gil, how are you feeling today?</view>
-  </view>
-  <!--Feeling组件-->
-  <view class="weui-grids">
-    <block wx:for="{{feelingList}}" wx:key="index">
-      <view class="weui-grid" data-index="{{index}}" data-feeling="{{item.text}}" bindtap="todayFeeling">
-        <image class="feelig-icon" src="{{item.icon}}"></image>
-        <view class="feeling-text">{{item.text}}</view>
-      </view>
-    </block>
-  </view>
-  <!--Recent-->
-  <view class="title">
-    <view class="text-recent">Recent Entries</view>
-  </view>
-  <!--Recent组件-->
-  <view class="recent-list">
-    <block wx:for="{{recentList}}" wx:key="index">
-      <view class="weui-cell">
-        <image class="recent-list-item-icon" src="{{feelingList[item.feeling].icon}}"></image>
-        <view class="weui-cell__bd">
-          <view class="recent-list-item-text">{{feelingList[item.feeling].text}}</view>
-          <view class="recent-list-item-time">{{item.date}}</view>
-        </view>
-        <view class="navigator-arrow"></view>
-      </view>
-    </block>
-  </view>
+	<!--Hi-->
+	<view class="title">
+		<view class="text-hi">Hi Gil, how are you feeling today?</view>
+	</view>
+	<!--Feeling组件-->
+	<view class="weui-grids">
+		<block wx:for="{{feelingList}}" wx:key="index">
+			<view class="weui-grid" data-index="{{index}}" bindtap="bindFeelingTap">
+				<image class="feelig-icon" src="{{item.icon}}"></image>
+				<view class="feeling-text">{{item.text}}</view>
+			</view>
+		</block>
+	</view>
+	<!--Recent-->
+	<view class="title">
+		<view class="text-recent">Recent Entries</view>
+	</view>
+	<!--Recent组件-->
+	<view class="recent-list">
+		<block wx:for="{{recentList}}" wx:key="index">
+			<view class="weui-cells item">
+				<view class="weui-cell__hb">
+					<image class="item-icon" src="{{feelingList[item.feeling].icon}}"></image>
+					<view class="weui-cell__bd">
+						<view class="item-text">{{feelingList[item.feeling].text}}</view>
+						<view class="item-time">{{item.date}}</view>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
 </view>

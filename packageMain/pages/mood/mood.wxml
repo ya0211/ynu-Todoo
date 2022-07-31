@@ -1,0 +1,43 @@
+<!--packageMain/pages/mood/mood.wxml-->
+<view class="page-view">
+
+	<!--Month组件-->
+	<view class="weui-cells">
+		<view class="weui-cell weui-cell_input">
+			<view class="weui-cell__hb">
+				<image class="image" src="/packageMain/resources/schedule/calendar.svg"></image>
+				<view class="text">MONTH</view>
+			</view>
+			<view class="weui-cell__bd">
+				<picker mode="date" value="{{month}}" fields="month" bindchange="bindMonthChange">
+					<view class="weui-input">{{month}}</view>
+				</picker>
+			</view>
+		</view>
+		<!--Operate组件-->
+		<view class="weui-cell operate" style="padding: 0px; ">
+			<view class="weui-grids">
+				<block wx:for="{{operateList}}" wx:key="index">
+					<view class="weui-grid" data-index="{{index}}" bindtap="bindOperateTap">
+						<image class="operate-item-icon" src="/packageMain/resources/mood/{{item}}.svg"></image>
+					</view>
+				</block>
+			</view>
+		</view>
+	</view>
+
+	<!--Recent组件-->
+	<view class="recent-list">
+		<block wx:for="{{recentList[month]}}" wx:key="index">
+			<view class="weui-cells item">
+				<view class="weui-cell__hb item__hb">
+					<image class="item-icon" src="{{feelingList[item.feeling].icon}}"></image>
+					<view class="weui-cell__bd">
+						<view class="item-text">{{feelingList[item.feeling].text}}</view>
+						<view class="item-time">{{item.date}}</view>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+</view>

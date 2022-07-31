@@ -2,65 +2,76 @@
 
 /* 页面布局 */
 .page {
-  padding: 10px 10px 10px;
-  text-align: left;
+	padding: 10px 10px 10px;
+	text-align: left;
 }
 
 /* folder */
 .folder {
-  position: relative;
-  background-color: var(--weui-BG-2);
-  border-radius: 8px;
-  padding: 20px;
-  line-height: 1.4;
-  font-size: 17px;
+	position: relative;
+	background-color: #fff;
+	border: 1px solid var(--weui-BG-0);
+	border-radius: 8px;
+	padding: 20px;
+	line-height: 1.4;
+	font-size: 17px;
 }
+
 .folder image.icon {
-  display: flex;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
+	display: flex;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
 }
+
 .folder view.text {
-  position: absolute;
-  top: 35%;
-  left: 20%;
-  color: #000;
+	position: absolute;
+	top: 35%;
+	left: 20%;
+	color: #000;
 }
+
 .folder view.count {
-  position: absolute;
-  top: 35%;
-  right: 35px;
-  font-weight: bold;
-  color: #656A72;
+	position: absolute;
+	top: 35%;
+	right: 35px;
+	font-weight: bold;
+	color: #656A72;
 }
 
 /* item */
 .item {
-  border-radius: 8px;
+	border-radius: 8px;
 }
+
 .weui-cells {
-  background-color: var(--weui-BG-1);
+	background-color: var(--weui-BG-1);
 }
+
 .weui-cells::after {
-  border: 0px;
+	border: 0px;
 }
+
 .weui-cells::before {
-  border: 0px;
+	border: 0px;
 }
+
 .weui-cell {
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  background-color:#fff;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	background-color: #fff;
 }
+
 .weui-cell:first-child {
-  margin-top: 15px;
+	margin-top: 15px;
 }
+
 .weui-cell::before {
-  border: 0px;
+	border: 0px;
 }
+
 .weui-cell::after {
-  border: 0px;
+	border: 0px;
 }
